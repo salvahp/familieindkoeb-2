@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f7f8f4" />
+  <meta name="description" content="Familieindkøb – del indkøbslister, kryds varer af, gem gamle lister, find aktuelle tilbud og sammenlign butikspriser." />
+  <title>Familieindkøb – styr på indkøbene, sammen</title>
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700;750;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="config.js" defer></script>
+  <script src="prisjagt.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div id="app"><div class="boot-screen"><div class="boot-mark">✳</div><p>Gør indkøbene lidt nemmere …</p></div></div>
+  <div id="toast-region" role="status" aria-live="polite"></div>
+  <script>
+    if ('serviceWorker' in navigator && location.protocol === 'https:') {
+      window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
+    }
+  </script>
+</body>
+</html>
